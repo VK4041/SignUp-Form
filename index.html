@@ -13,58 +13,67 @@
         <section class="banner">
             <div class="overlay">
                 <div class="logo-container">
-                    <img src="" alt="logo-image">
+                    <img class="logo-image" src="./images/overlay-logo.jpg" alt="logo-image">
                 </div>
                 <div class="heading-container">
-                    <h1 class="title">EZ-Travel</h1>
-                    <h2 class="subtitle">Book your next vacation with us</h2>
+                    <h1 class="title">Odin Travels</h1>
                 </div>
             </div>
         </section>
         <section class="content">
-            <section class="hero-text">Book hotels, flights and travel insurance all at one place</section>
-            <section class="form">
+            <section class="heroDiv">
+                <p class="hero-text">Book hotels, flights and travel insurance all at one place</p>
+            </section>
+            <fieldset class="form-box" id="form-box">
+                <legend class="form-title">Tell us about yourself</legend>
                 <form id="mainForm" action="#" method="post">
-                    <p class="form-title">Tell us about yourself</p>
+                    <div class="required">Required fields are marked with *</div>
                     <div class="name">
                         <div class="fname">
-                            <label for="firstName">FIRST NAME</label>
-                            <input type="text" id="firstName" name="firstName">
+                            <label for="firstName">FIRST NAME*</label>
+                            <input type="text" id="firstName" name="firstName" required placeholder="John" minlength="3"
+                                maxlength="15">
                         </div>
                         <div class="lname">
                             <label for="lastName">LAST NAME</label>
-                            <input type="text" id="lastName" name="lastName">
+                            <input type="text" id="lastName" name="lastName" placeholder="Doe">
                         </div>
                     </div>
                     <div class="email-phone">
                         <div class="emailDiv">
-                            <label for="email">EMAIL ADDRESS</label>
-                            <input type="email" id="email" name="email">
+                            <label for="email">EMAIL ADDRESS*</label>
+                            <input type="email" id="email" name="email" required placeholder="travel@odin.com">
                         </div>
                         <div class="phoneDiv">
                             <label for="phone">PHONE NUMBER</label>
-                            <input type="tel" id="phone" name="phone">
+                            <input type="tel" id="phone" name="phone" placeholder="0412374567" pattern="\d{10}"
+                                required>
                         </div>
                     </div>
                     <div class="pass">
                         <div class="passDiv">
-                            <label for="password">PASSWORD</label>
-                            <input type="password" id="password" name="password">
+                            <label for="password">PASSWORD*</label>
+                            <input type="password" id="password" name="password" required maxlength="15">
                         </div>
                         <div class="passDiv">
-                            <label for="confirm-password">CONFIRM PASSWORD</label>
-                            <input type="password" id="confirm-password" name="confirm-password">
+                            <label for="confirm-password">CONFIRM PASSWORD*</label>
+                            <input type="password" id="confirm-password" name="confirm-password" required
+                                maxlength="15">
                         </div>
                     </div>
                 </form>
-            </section>
+            </fieldset>
             <section class="cta">
                 <p class="cta-text">Join now for upto 20% off on your first booking!</p>
-                <button form="mainForm">Register</button>
+                <button form="mainForm" type="submit" class="submitBtn">Register</button>
             </section>
         </section>
-        <footer class="footer"></footer>
     </main>
+    <footer class="footer">Made by Varun Kumar
+        <a href="https://github.com/VK4041" target="_blank">
+            <img src="./images/github-logo.png" alt="github-link" class="github-logo">
+        </a>
+    </footer>
 </body>
 
 </html>
